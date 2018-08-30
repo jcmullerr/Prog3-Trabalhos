@@ -89,9 +89,9 @@ public class TelaBase extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		double v1 = 0;
-		double v2 = 0;
-		double total = 0;
+		int v1 = 0;
+		int v2 = 0;
+		int total = 0;
 		
 		for(int i = 0; i < listaTF.size() - 1; i++) {
 			
