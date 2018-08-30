@@ -104,7 +104,6 @@ public class TelaBase extends JFrame implements ActionListener {
 		
 		total = v1 + v2;
 		Math.sqrt(total);
-		JOptionPane.showMessageDialog(null, "O resultado é " +total);
 		
 		for(int i = 0; i <= listaTF.size(); i++) {
 			
