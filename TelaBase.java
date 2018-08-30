@@ -103,12 +103,11 @@ public class TelaBase extends JFrame implements ActionListener {
 		}
 		
 		total = v1 + v2;
-		Math.sqrt(total);
 		
 		for(int i = 0; i <= listaTF.size(); i++) {
 			
 			if(i == listaTF.size() - 1) {
-				listaTF.get(i).setText(Integer.toString(total));
+				listaTF.get(i).setText(Double.toString(Math.sqrt(total)));
 			}
 			
 		}
