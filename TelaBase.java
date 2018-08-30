@@ -93,17 +93,11 @@ public class TelaBase extends JFrame implements ActionListener {
 		int v2 = 0;
 		int total = 0;
 		
-		for(int i = 0; i < listaTF.size() - 1; i++) {
-			
-			v1 = (Integer.parseInt(listaTF.get(i).getText()) * (Integer.parseInt(listaTF.get(i).getText())));
-			if(i != 0) {
-				v2 = (Integer.parseInt(listaTF.get(i).getText()) * (Integer.parseInt(listaTF.get(i).getText())));
-			}
-			
-		}
+		v1 = (Integer.parseInt(listaTF.get(0).getText()) * (Integer.parseInt(listaTF.get(0).getText())));
+		v2 = (Integer.parseInt(listaTF.get(1).getText()) * (Integer.parseInt(listaTF.get(1).getText())));
 		
 		total = v1 + v2;
-		
+		System.out.println(total);
 		for(int i = 0; i <= listaTF.size(); i++) {
 			
 			if(i == listaTF.size() - 1) {
