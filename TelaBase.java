@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 import java.util.ArrayList;
+import java.awt.event.MouseListener;
 
 public class TelaBase extends JFrame implements ActionListener {
 	
@@ -93,17 +94,22 @@ public class TelaBase extends JFrame implements ActionListener {
 		int v2 = 0;
 		int total = 0;
 		
-		v1 = (Integer.parseInt(listaTF.get(0).getText()) * (Integer.parseInt(listaTF.get(0).getText())));
-		v2 = (Integer.parseInt(listaTF.get(1).getText()) * (Integer.parseInt(listaTF.get(1).getText())));
-		
-		total = v1 + v2;
-		System.out.println(total);
-		for(int i = 0; i <= listaTF.size(); i++) {
+		if(listaTF.get(0).getText().equals("") || listaTF.get(1).getText().equals("")) {
+			JOptionPane.showMessageDialog(null, "Dados insuficientes para cálculo do Triângulo Retângulo");
+		}
+		else {
+			v1 = (Integer.parseInt(listaTF.get(0).getText()) * (Integer.parseInt(listaTF.get(0).getText())));
+			v2 = (Integer.parseInt(listaTF.get(1).getText()) * (Integer.parseInt(listaTF.get(1).getText())));
 			
-			if(i == listaTF.size() - 1) {
-				listaTF.get(i).setText(Double.toString(Math.sqrt(total)));
+			total = v1 + v2;
+			for(int i = 0; i <= listaTF.size(); i++) {
+				
+				if(i == listaTF.size() - 1) {
+					listaTF.get(i).setForeground(Color.RED);
+					listaTF.get(i).setText(Double.toString(Math.sqrt(total)));
+				}
+				
 			}
-			
 		}
 		
 	}
