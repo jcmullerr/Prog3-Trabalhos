@@ -58,11 +58,11 @@ public class TelaBase extends JFrame implements ActionListener {
 		tf.setBounds(x, y, w, h);
 		container.add(tf);
 		listaTF.add(tf);
-		tf.setopque(true);
+		tf.setOpaque(true);
 		tf.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				tf.setBackground(Color.gray);
+				tf.setBackground(Color.LIGHT_GRAY);
 				
 			}
 
